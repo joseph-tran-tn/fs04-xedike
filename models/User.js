@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
   fullname: {type: String, required: true},
   userType: {type: String, required: true},
   phone: {type: String, required: true, unique: true},
-  DOB: {type: Datee},
+  DOB: {type: Date},
   registerDate: {
     type: Date,
     default: new Date()
@@ -18,6 +18,6 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", UserSchema);
 
-module.export = {
+module.exports = {
   User, UserSchema
 }
